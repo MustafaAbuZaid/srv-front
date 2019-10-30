@@ -12,4 +12,4 @@ RUN npm update
 RUN npm i 
 RUN ng build
 EXPOSE  4200 
-ENTRYPOINT  node server.js
+ENTRYPOINT npm start
