@@ -20,9 +20,6 @@ const app = express();
 // Point static path to dist
 app.use(express.static(path.join(__dirname, 'dist')));
 // Set our api routes
-app.use('/api/dashboard', proxy({
-  target: 'http://' + config.get('externalRepos').folder_structure, 
-  pathRewrite: {"^/api/dashboard": "/dashboard"}}));
 app.use('/api', proxy({ target: 'http://' + config.get('externalRepos').authentication }));
 // app.use('/api/vehicles', proxy({ target: 'http://' + config.get('externalRepos').authentication }));
 // app.use('/api/dashboard', proxy({ target: 'http://' + config.get('externalRepos').folder_structure }));
