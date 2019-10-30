@@ -8,8 +8,10 @@ COPY . /srv-front
 WORKDIR srv-front
 
  
-RUN npm update     
+RUN npm rebuild node-sass 
+RUN npm update  
+RUN npm install -g npm-check-updates  
 RUN npm i 
-RUN ng build
-EXPOSE  4200 
-ENTRYPOINT npm start
+RUN ng build 
+EXPOSE  4200  
+ENTRYPOINT  NODE_ENV=docker node server.js
