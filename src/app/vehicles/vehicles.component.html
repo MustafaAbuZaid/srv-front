@@ -1,0 +1,74 @@
+<h1>Hi!</h1>
+<h3>All registered Vehicles:</h3>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-3" style="text-align: right"> Customer Filter: </div>
+    <div class="col-4">
+     <input type="text" class="form-control" (keyup)="filterData($event)"/>
+    </div>
+
+</div>
+<br>
+<table class="table table-hover" style="width:100%">
+    <tr>
+        <th>Vehicle Plate</th>
+        <th>Customer</th>
+        <th>Address</th>
+        <th>Status</th>
+    </tr>
+    <tr *ngFor="let vehicle of Vehicles">
+        <td>{{vehicle.plate}}</td>
+        <td>{{vehicle.customer}} </td>
+        <td>{{vehicle.address}} </td>
+        <td>
+            <div *ngIf="vehicle.status == 0">
+                 <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M42 2l-17.18 17.18 17.18 17.18v-34.36zm-32.45 7l-2.55 2.54 12.73 12.73-17.73 17.73h35.45l4 4 2.55-2.55-34.45-34.45z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>
+            </div>
+            <div *ngIf="vehicle.status == 1">
+                <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M40 13.66v26.34h-26.34l26.34-26.34m4-9.66l-40 40h40v-40z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>
+            </div>
+            <div *ngIf="vehicle.status == 2">
+                 <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M4 44h40v-40z" fill-opacity=".3"/><path d="M24 24l-20 20h20z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>
+            </div>
+            <div *ngIf="vehicle.status == 3">
+                <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M4 44h40v-40z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>
+            </div>
+        </td>
+    </tr>
+</table>  
+<!-- <td><button [routerLink]="['/addVehicle']" class="btn btn-primary">Add Vehicle</button></td> -->
+
+
+<!-- 
+<p-dataTable [value]="Vehicles">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Vehicle Plate</th>
+            <th>Customer</th>
+            <th>Address</th>
+            <th>Status</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-car>
+        <tr>
+            <td>{{vehicle.plate}}</td>
+            <td>{{vehicle.customer}} </td>
+            <td>{{vehicle.address}} </td>
+            <td>
+                <div *ngIf="vehicle.status == 0">
+                     <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M42 2l-17.18 17.18 17.18 17.18v-34.36zm-32.45 7l-2.55 2.54 12.73 12.73-17.73 17.73h35.45l4 4 2.55-2.55-34.45-34.45z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>
+                </div>
+                <div *ngIf="vehicle.status == 1">
+                    <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M40 13.66v26.34h-26.34l26.34-26.34m4-9.66l-40 40h40v-40z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>
+                </div>
+                <div *ngIf="vehicle.status == 2">
+                     <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M4 44h40v-40z" fill-opacity=".3"/><path d="M24 24l-20 20h20z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>
+                </div>
+                <div *ngIf="vehicle.status == 3">
+                    <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M4 44h40v-40z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>
+                </div>
+            </td>
+        </tr>
+    </ng-template>
+</p-dataTable> -->
+<p><a [routerLink]="['/dashboard']">Back</a></p>

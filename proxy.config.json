@@ -1,0 +1,145 @@
+{
+  "/api/dashboard/*": {
+    "target": "http://localhost:3004",
+    "secure": false,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api/dashboard": "/dashboard"
+    }
+  },
+  "/api/manageBranch/*": {
+    "target": "http://localhost:3001",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/api/manageDepartment/*": {
+    "target": "http://localhost:3001",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/api/contentType/*": {
+    "target": "http://localhost:3002",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/api/wopi/*": {
+    "target": "http://localhost:3004",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/api/*": {
+    "target": "http://localhost:3005",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/ContentTypeEngine/*": {
+    "target": "http://localhost:3002",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/file-structure/*": {
+    "target": "http://localhost:3004",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/manage-sharing/*": {
+    "target": "http://localhost:3004",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/scanning-profile/*": {
+    "target": "http://localhost:3004",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/versioning/*": {
+    "target": "http://localhost:3005",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/settings/*": {
+    "target": "http://localhost:3005",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/setting/*": {
+    "target": "http://localhost:3005",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/recent-activities/*": {
+    "target": "http://localhost:3004",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/sharing-activities/*": {
+    "target": "http://localhost:3004",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/applicationSecurity/*": {
+    "target": "http://localhost:3005",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/repositorySecurity/*": {
+    "target": "http://localhost:3005",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/manageGroup/*": {
+    "target": "http://localhost:3005",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/seach-content/*": {
+    "target": "http://localhost:3004",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/search-template/*": {
+    "target": "http://localhost:3004",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/save-search-content/*": {
+    "target": "http://localhost:3004",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/manage-users/*": {
+    "target": "http://localhost:3005",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/saveSearch/*": {
+    "target": "http://localhost:3004",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/saveProfile/*": {
+    "target": "http://localhost:3004",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/notifications/*": {
+    "target": "http://localhost:3007",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/general-settings/*": {
+    "target": "http://localhost:3005",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/classification/*": {
+    "target": "http://localhost:3018",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/node-streaming/*": {
+    "target": "http://localhost:3014",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}
