@@ -12,6 +12,10 @@ Find above the structure that services calling each other,
 as it displayed in the sketch, the front-end service calling only the authentication service,
 then the auth servers navigate to the business services to navigate to each dal to the database
 
+## Technologies
+
+This project using Nodejs as a backend, Angular as front, MongoDB and for the DevOps, Using Jenkins and Docker
+
 ## Development server
 
 System is deployed and running on an Azure machine
