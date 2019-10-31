@@ -24,7 +24,7 @@ System is deployed and running on an Azure machine
 <a href="http://40.114.48.59"> Vehicle Tracker
 ## CI/CD
 
-we are using Jenkins as CI/CD tool over Azure 
+We are using Jenkins as CI/CD tool over Azure 
 Jenkins jobs are responsible to call the pipeline script that already exists in the services Jenkinsfile on GitHub Repos
 
 so the pipeline stages are building the dockers then push to docker hub finally deploy on the Azure server.
