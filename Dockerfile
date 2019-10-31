@@ -14,4 +14,4 @@ RUN npm install -g npm-check-updates
 RUN npm i 
 RUN ng build 
 EXPOSE  4200  
-ENTRYPOINT  NODE_ENV=docker node server.js
+ENTRYPOINT  node server.js
