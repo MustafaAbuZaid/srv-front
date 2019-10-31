@@ -45,7 +45,7 @@ this.Vehicles = this.Vehicles.filter(a=>a.customer.toLowerCase().indexOf(e.targe
         this.interval = setInterval(() => {
             console.log('ho');
             this.loadAllVehicles();
-        }, 200000)
+        }, 60000)
     }
 allData = [];
 
