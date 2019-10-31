@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This project using microservices architecture, please find below the architectural sketch
 
-<a href="https://ibb.co/MnRQrSX"><img src="https://i.ibb.co/wyKjVgv/Vehicles-Tracher-Arch.png" alt="Vehicles-Tracher-Arch" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>upload image</a><br />
+<a href="https://ibb.co/MnRQrSX"><img src="https://i.ibb.co/wyKjVgv/Vehicles-Tracher-Arch.png" alt="Vehicles-Tracher-Arch" border="0"></a>
 
 Find above the structure that services calling each other,
 as it displayed in the sketch, the front-end service calling only the authentication service,
@@ -16,6 +16,8 @@ then the auth servers navigate to the business services to navigate to each dal 
 
 System is deployed and running on an Azure machine
 
+## Demo
+<a href="http://40.114.48.59"> Vehicle Tracker
 ## CI/CD
 
 we are using Jenkins as CI/CD tool over Azure 
