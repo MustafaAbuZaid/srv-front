@@ -8,23 +8,21 @@ This project using microservices architecture, please find below the architectur
 
 <a href="https://ibb.co/MnRQrSX"><img src="https://i.ibb.co/wyKjVgv/Vehicles-Tracher-Arch.png" alt="Vehicles-Tracher-Arch" border="0"></a>
 
-Find above the structure that services calling each other,
-as it displayed in the sketch, the front-end service calling only the authentication service,
-then the auth servers navigate to the business services to navigate to each dal to the database
+As per above architecture front end server is the only exposed service which get all requests from users then route coming requests to corresponding service. As per microservices architecture standards all business services have its ownd DAL to communicate independantly to database.
 
 ## Technologies
 
-This project using Nodejs as a backend, Angular as front, MongoDB and for the DevOps, Using Jenkins and Docker
+This project using Nodejs as a backend, Angular as front, and MongoDB as DB engine
+All servers are created as Dockers containers
 
 ## Development server
 
-System is deployed and running on an Azure machine
+System is deployed and running on an Azure machine its connection details will be shared by email 
 
 ## Demo
 <a href="http://40.114.48.59"> Vehicle Tracker
+  
 ## CI/CD
 
-We are using Jenkins as CI/CD tool over Azure 
-Jenkins jobs are responsible to call the pipeline script that already exists in the services Jenkinsfile on GitHub Repos
-
-so the pipeline stages are building the dockers then push to docker hub finally deploy on the Azure server.
+used Jenkins as CI/CD tool over Azure 
+All environment services are deployed using Jenkins' pipeline scripts
