@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.0-rc.1.
 
-## Application archtecture
+## Architecture sketch
 
 This project using microservices architecture, please find below the architectural sketch
 
