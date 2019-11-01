@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { AlertService } from '../alert/alert.service'; 
+
 import { Customer, ReturnClass } from '../customers/customer';
 @Injectable({
   providedIn: 'root'
@@ -8,7 +10,7 @@ import { Customer, ReturnClass } from '../customers/customer';
 
 export class LoginService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private alertService: AlertService) { }
   login(customername: string, password: string) {
     var customer = { customername: customername, password: password }
     return this.http.post<ReturnClass>(`/api/authentication/login`, customer)
@@ -20,6 +22,8 @@ export class LoginService {
         } else {
           console.log('err');
           console.log(customer);
+          return(this.alertService.error("User not exists,Please register"));
+
         }
 
         return customer.data;
