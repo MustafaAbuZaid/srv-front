@@ -48,15 +48,30 @@ export class LoginComponent implements OnInit {
         }
 
         this.loading = true;
-        this.authenticationService.login(this.f.customername.value, this.f.password.value)
+            this.authenticationService.login(this.f.customername.value, this.f.password.value)
             .pipe(first())
             .subscribe(
                 data => {
+                    console.log('data');
+                    console.log(data);
+                    if(data==undefined)
+                    {
+                        console.log('yes')
+                        this.alertService.error('User not exists,Please register');
+                        this.loading = false;
+
+                    }
+                    else 
+                    {
+                        console.log('no')
                     this.router.navigate(['/vehicles']);
+                }
                 },
                 error => {
                     this.alertService.error(error);
                     this.loading = false;
-                });
+                });   
+        
+        
     }
 }
