@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "~7.0.0-rc.0",
     "@angular/router": "^7.0.4",
     "bootstrap": "^4.3.1",
-    "convict": "^5.2.0",
+    "convict": "^6.2.2",
     "core-js": "^2.5.4",
     "dotenv": "^8.2.0",
     "errorhandler": "^1.5.1",
